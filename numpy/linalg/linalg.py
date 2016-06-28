@@ -512,6 +512,10 @@ def inv(a):
             [ 3. , -1. ]]])
 
     """
+     if type(a) in [float,int] :
+        return 1/a
+    if a.shape[0]==1:
+        return 1/a[0]
     a, wrap = _makearray(a)
     _assertRankAtLeast2(a)
     _assertNdSquareness(a)
